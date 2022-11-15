@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        working-directory: ['0.70', '0.69', '0.68', '0.67', '0.66', '0.65', '0.64', '0.63']
+        working-directory: ['0.70', '0.69', '0.68', '0.67', '0.66', '0.65', '0.64']
       fail-fast: false
     concurrency:
       group: build_android_rea2-${{ matrix.working-directory }}
@@ -36,7 +36,7 @@ jobs:
     runs-on: macos-12
     strategy:
       matrix:
-        working-directory: ['0.70', '0.69', '0.68', '0.67', '0.66', '0.65', '0.64', '0.63']
+        working-directory: ['0.70', '0.69', '0.68', '0.67', '0.66', '0.65', '0.64']
       fail-fast: false
     concurrency:
       group: build_ios-rea2-${{ matrix.working-directory }}
