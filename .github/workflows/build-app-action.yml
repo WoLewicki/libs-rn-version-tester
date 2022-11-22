@@ -36,7 +36,7 @@ jobs:
         if: ${{ inputs.platform == 'iOS' }}
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: '2.7.5'
+          ruby-version: '2.7'
 
       - name: Create react app
         run: npx react-native init app --version ${{ matrix.working-directory }}
