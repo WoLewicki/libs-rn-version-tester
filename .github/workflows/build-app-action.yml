@@ -36,13 +36,13 @@ jobs:
         run: npx react-native init app --version ${{ matrix.working-directory }}
       - name: Install Reanimated
         working-directory: app
-        run: yarn add github:software-mansion/react-native-reanimated#${{ inputs.branch_name }}
+        run: yarn add github:WoLewicki/picker#${{ inputs.branch_name }}
 
       - name: Install pods
         if: ${{ inputs.platform == 'iOS' }}
         working-directory: app/ios
         run: pod install
-      - name: Build Android app
+      - name: Build iOS app
         if: ${{ inputs.platform == 'iOS' }}
         working-directory: app
         run: npx react-native run-ios
