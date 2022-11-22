@@ -32,6 +32,12 @@ jobs:
         with:
           java-version: '11'
 
+      - name: Setup Ruby
+        if: ${{ inputs.platform == 'iOS' }}
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.7.5
+
       - name: Create react app
         run: npx react-native init app --version ${{ matrix.working-directory }}
       - name: Install Reanimated
