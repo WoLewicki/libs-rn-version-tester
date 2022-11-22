@@ -34,9 +34,12 @@ jobs:
 
       - name: Setup Ruby
         if: ${{ inputs.platform == 'iOS' }}
-        uses: actions/setup-ruby@v1
-        with:
-          ruby-version: '2.7'
+        run: |
+          brew update
+          brew install ruby-build
+          brew install rbenv
+          rbenv install 2.7.5
+          rbenv global 2.7.5
 
       - name: Create react app
         run: npx react-native init app --version ${{ matrix.working-directory }}
