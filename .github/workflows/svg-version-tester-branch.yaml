@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  SVG_BRANCH: "janicduplessis:auto-size"
+  SVG_BRANCH: "@wolewicki/bring-071-to-examples"
 
 jobs:
   build_android:
