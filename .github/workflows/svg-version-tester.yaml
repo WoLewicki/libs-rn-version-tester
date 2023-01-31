@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        working-directory: ['0.71', 0.70', '0.69', '0.68', '0.67', '0.66', '0.65', '0.64']
+        working-directory: ['0.71', '0.70', '0.69', '0.68', '0.67', '0.66', '0.65', '0.64']
       fail-fast: false
     concurrency:
       group: build_android_svg-${{ matrix.working-directory }}
